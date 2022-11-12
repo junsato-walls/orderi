@@ -28,7 +28,7 @@ You can try GET, POST, PUT
 # Show Database
 $ docker exec -it db bash
 
-$ mysql -u user -h 127.0.0.1 -D wouch -p
+$ mysql -u user -h 127.0.0.1 -D order -p
 $ password
 $ show databases;
 
@@ -60,33 +60,3 @@ Result
 ```
 [{"id":1,"age":15,"name":"太郎"},{"id":2,"age":13,"name":"次郎"},{"id":3,"age":20,"name":"花子"},{"id":4,"age":10,"name":"士郎"}]
 ```
-$メニューの追加　put
-http://localhost:8000/menus?category_id=1&menu=ピザ&price=1200&view_no=10
-
-$メニューの編集　post
-http://localhost:8000/menus?id=1&category_id=1&menu=やきそば&price=1100&view_no=99
-
-# apiの命名規則
-$ localhost:{テーブル名} 
-$ localhost:{画面ID}/{APINum}
-
-GET
-/m_companies
-GET
-/m_employees
-GET
-/m_payments
-GET
-/m_calendar
-GET
-/m_jobshift
-GET
-/m_admin
-GET
-/t_attends
-GET
-/t_leaverequest
-GET
-/t_payments
-m_leavemanage
-t_leaverequest
